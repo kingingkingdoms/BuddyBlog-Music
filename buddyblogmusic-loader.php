@@ -116,7 +116,7 @@ class BuddyBlogMusic_Core_Component extends BP_Component {
 		}
 		// Add the Group Invites nav item.
 		$sub_nav['my-music'] = array(
-			'name'            => __( 'Posts', 'buddyblogmusic' ),
+			'name'            => __( 'Songs', 'buddyblogmusic' ),
 			'slug'            => BUDDYBLOGMUSIC_ARCHIVE_SLUG,
 			'parent_url'      => $blog_link,
 			'parent_slug'     => $this->slug,
