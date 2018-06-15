@@ -66,7 +66,7 @@ class BuddyBlogMusic_Core_Component extends BP_Component {
 			'root_slug'             => BP_BUDDYBLOGMUSIC_SLUG,
 			'has_directory'         => false,
 			'notification_callback' => 'buddyblogmusic_format_notifications',
-			'search_string'         => __( 'Search Posts...', 'buddyblogmusic' ),
+			'search_string'         => __( 'Search Songs...', 'buddyblogmusic' ),
 			'global_tables'         => array(),
 		);
 
@@ -125,11 +125,11 @@ class BuddyBlogMusic_Core_Component extends BP_Component {
 		);
 
 		$sub_nav['new-post'] = array(
-			'name'            => __( 'New Post', 'buddyblogmusic' ),
+			'name'            => __( 'New Song', 'buddyblogmusic' ),
 			'slug'            => 'edit',
 			'parent_url'      => $blog_link,
 			'parent_slug'     => $this->slug,
-			'screen_function' => array( $screen, 'new_post' ),
+			'screen_function' => array( $screen, 'new_music' ),
 			'user_has_access' => bp_is_my_profile(),
 			'position'        => 30,
 		);
@@ -157,9 +157,9 @@ class BuddyBlogMusic_Core_Component extends BP_Component {
 			$user_domain = bp_loggedin_user_domain();
 			$blog_link   = trailingslashit( $user_domain . $this->slug );
 
-			$title = __( 'Posts', 'buddyblogmusic' );
+			$title = __( 'Music', 'buddyblogmusic' );
 			// My Posts.
-			$wp_admin_nav['posts'] = array(
+			$wp_admin_nav['music'] = array(
 				'parent' => $bp->my_account_menu_id,
 				'id'     => 'my-account-' . $this->id,
 				'title'  => $title,
@@ -169,16 +169,16 @@ class BuddyBlogMusic_Core_Component extends BP_Component {
 			$wp_admin_nav['my-music'] = array(
 				'parent'   => 'my-account-' . $this->id,
 				'id'       => 'my-account-' . $this->id . '-my-music',
-				'title'    => __( 'My Posts', 'buddyblogmusic' ),
+				'title'    => __( 'All Songs', 'buddyblogmusic' ),
 				'href'     => trailingslashit( $blog_link ),
 				'position' => 10,
 			);
 
 			// Add new Posts.
-			$wp_admin_nav['new-post'] = array(
+			$wp_admin_nav['new-music'] = array(
 				'parent'   => 'my-account-' . $this->id,
-				'id'       => 'my-account-' . $this->id . '-new-post',
-				'title'    => __( 'New Post', 'buddyblogmusic' ),
+				'id'       => 'my-account-' . $this->id . '-new-music',
+				'title'    => __( 'New Song', 'buddyblogmusic' ),
 				'href'     => trailingslashit( $blog_link . 'edit' ),
 				'position' => 20,
 			);
@@ -202,7 +202,7 @@ class BuddyBlogMusic_Core_Component extends BP_Component {
 
 			if ( bp_is_my_profile() && ! bp_is_single_item() ) {
 
-				$bp->bp_options_title = __( 'Posts', 'buddyblogmusic' );
+				$bp->bp_options_title = __( 'Music', 'buddyblogmusic' );
 
 			} elseif ( ! bp_is_my_profile() && ! bp_is_single_item() ) {
 
