@@ -191,7 +191,7 @@ class BuddyBlogMusic_Admin_Settings_Helper {
 			),
 			array(
 				'name'    => 'publish_cap',
-				'label'   => __( 'Which capability is required for pusblishing?', 'buddyblogmusic' ),
+				'label'   => __( 'Which capability is required for publishing?', 'buddyblogmusic' ),
 				'desc'    => __( 'Please check for https://codex.wordpress.org/Roles_and_Capabilities allowed capabilities.', 'buddyblogmusic' ),
 				'type'    => 'text',
 				'default' => 'read',
