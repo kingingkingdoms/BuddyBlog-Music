@@ -1,14 +1,11 @@
 <?php
-/**
- * Plugin Name: BuddyBlog Music
- * Version: 1.3.2
- * Author: K&L
- * Author URI: https://millionairedigest.com/members/kl/
- * Plugin URI: https://millionairedigest.com/
- * Description: Add a BuddyPress profile nav tab called "Music" to user's profiles for giving our users the ability to display all of the songs they've created.
- *
- * @package buddyblog
- */
+/*
+Plugin Name: Millionaire's Digest Profile Music
+Description: Add a BuddyPress profile nav tab called "Music" to user's profiles for giving our users the ability to display all of the songs they've created.
+Version: 1.0.0
+Author: K&L (Founder of the Millionaire's Digest)
+Author URI: https://millionairedigest.com/
+*/
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
