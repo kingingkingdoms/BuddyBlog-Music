@@ -254,7 +254,7 @@ class BuddyBlogMusic_Admin_Settings_Helper {
 	 * Add option page
 	 */
 	public function admin_menu() {
-		add_options_page( __( 'BuddyBlogMusic Settings', 'buddyblogmusic' ), __( 'BuddyBlog Music', 'buddyblogmusic' ), 'manage_options', 'buddyblogmusic', array(
+		add_options_page( __( 'BuddyBlogMusic Settings', 'buddyblogmusic' ), __( 'Profile Music', 'buddyblogmusic' ), 'manage_options', 'buddyblogmusic', array(
 			$this->page,
 			'render',
 		) );
