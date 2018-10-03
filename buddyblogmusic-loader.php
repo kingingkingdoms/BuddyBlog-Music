@@ -58,7 +58,7 @@ class BuddyBlogMusic_Core_Component extends BP_Component {
 
 		// Define a slug, if necessary.
 		if ( ! defined( 'BP_BUDDYBLOGMUSIC_SLUG' ) ) {
-			define( 'BP_BUDDYBLOGMUSIC_SLUG', $this->id );
+			define( 'BP_BUDDYBLOGMUSIC_SLUG', 'music' );
 		}
 
 		$globals = array(
